@@ -1,0 +1,16 @@
+// Define path for bootstrap
+// ../../../../node_modules/bootstrap-sass/assets/stylesheets: '../../../../node_modules/bootstrap-sass/assets/stylesheets';
+// only import bootstrap modules that we need inproject
+@import '../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// // Reset and dependencies
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+// // Core CSS
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+// @import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
