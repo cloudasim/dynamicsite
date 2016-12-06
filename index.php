@@ -19,7 +19,7 @@
         $message = $db->connect_error;
     }
     else{
-        $sql = 'SELECT * FROM contacts ORDER BY savedon';
+        $sql = 'SELECT * FROM contacts ORDER BY savedon DESC';
         $result = $db->query($sql);
         if($db->error){
             $message = $db->error;
@@ -56,17 +56,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7">
-                    <h4>Recently Added</h4>
+                    <h4>Recently Added <small>from database</small></h4>
                     <hr>
                     <?php if($message){
                         echo $message;
                     } else{ ?>
                     <ul class="list-group">
                         <?php while ($row = $result->fetch_assoc()) { ?>
-                            <li class='list-group-item'> <?php echo $row['name']; ?> <small> <?php echo $row['contact'];  ?></small> <a href="tel:<?php echo $row['contact']; ?>" class="label label-success pull-right"><i class="fa fa-phone"></i></a> </li>
+                            <li class='list-group-item'>
+                                <?php echo $row['name']; ?>
+                                <small> <?php echo $row['contact'];  ?></small>
+                                <a href="tel:<?php echo $row['contact']; ?>" class="label label-success pull-right"><i class="fa fa-phone"></i></a>
+                            </li>
                         <?php } ?>
                     </ul>
                     <?php } ?>
+
+                    <hr>
+                    <h4>Data Fetch from array</h4>
+                    <ul>
+                        <?php 
+                            foreach ($contacts as $name => $contact) {
+                                echo "<li>" . $name . " <small> [ " . $contact . " ]</small></li>";
+                            }
+                        ?>
+                    </ul>
                 </div>
 
                 <div class="col-sm-5">

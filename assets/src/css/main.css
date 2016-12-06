@@ -7374,4 +7374,11 @@ footer {
   padding-top: 20px;
 }
 
+.form-msg {
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
 /*# sourceMappingURL=main.css.map */
