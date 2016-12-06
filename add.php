@@ -41,24 +41,6 @@
                         }
 
                         echo $fullname. "<br>". $contact . "<br>" . $savedon;
-                        // connect to db
-                        $db = new mysqli($server, $username, $password, $dbname);
-                        if ($db->connect_error) {
-                            $message = $db->connect_error;
-                        }
-                        
-                        else{
-                            if (isset($_POST['submit'])){
-                                $sql = 'INSERT INTO contacts (name, contact, savedon) VALUES ($fullname, $contact, $savedon)';
-                                if($db->query($sql) === TRUE){
-                                    echo "<br> New contact Added";
-                                }
-                                if($db->error){
-                                    echo "<br>" . $db->error;
-                                }
-                            }
-                        }
-
                     ?>
                 </div>
             </div>   
